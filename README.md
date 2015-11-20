@@ -20,7 +20,7 @@ Usage
 -----
 For easier ssh use add something like this to your ~/.ssh/config:
 ```
-HOST www.example.com
+Host www.example.com
 	IdentityFile /path/to/your/ssh/key
 	User root
 	Port 8080
@@ -29,10 +29,14 @@ HOST www.example.com
 Create and transfer a repository to your host:
 ```
 git init --bare project.git
-scp -r project.git example.com:/git
+scp -r project.git www.example.com:/git
 ```
 
 Clone your repository:
 ```
 git clone ssh://www.example.com/git/project.git
 ```
+
+Misc
+----
+[Official Git over SSH Docs](https://www.git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key)
