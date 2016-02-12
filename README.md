@@ -13,7 +13,7 @@ docker build -t your-name/git_ssh_srv .
 
 Start your container:
 ```
-docker run --detach --publish 8080:22 --name git_ssh_srv your-name/git_ssh_srv
+docker run --detach --restart=unless-stopped:3 --publish 8080:22 --name git_ssh_srv your-name/git_ssh_srv
 ```
 
 Usage
