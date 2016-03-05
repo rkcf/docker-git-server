@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:15.04
 MAINTAINER zoombafu
 
 RUN apt-get update && apt-get upgrade -y \
@@ -6,6 +6,7 @@ RUN apt-get update && apt-get upgrade -y \
 	&& apt-get clean
 
 COPY git_key.pub /root/.ssh/authorized_keys
+copy ./conf/sshd_config /etc/ssh/sshd_config
 
 RUN mkdir /var/run/sshd
 
