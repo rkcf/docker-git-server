@@ -28,10 +28,8 @@ ChallengeResponseAuthentication no
 PubkeyAuthentication yes
 RSAAuthentication no
 AuthorizedKeysFile %h/.ssh/authorized_keys
-UsePAM no
 
 # Usersettings
 AllowAgentForwarding no
 AllowTcpForwarding no
 X11Forwarding no
-PrintLastLog yes
